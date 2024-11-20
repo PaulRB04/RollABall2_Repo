@@ -46,8 +46,8 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         //Aquí se codea/llama a acciones que dependan de la física CONSTANTE
-        VelocityMove();
-        //ForceMove();
+        //VelocityMove();
+        ForceMove();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -78,7 +78,7 @@ public class PlayerController : MonoBehaviour
         playerRb.AddForce(Vector3.right * horInput * speed);
         playerRb.AddForce(Vector3.forward * verInput * speed);
     }
-
+    
     void Jump()
     {
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
