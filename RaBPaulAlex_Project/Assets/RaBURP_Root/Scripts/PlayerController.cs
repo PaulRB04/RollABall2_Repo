@@ -94,6 +94,10 @@ public class PlayerController : MonoBehaviour
         playerAudio.PlayOneShot(soundLibrary[1]);
         //Cambia la posición del player por la posición del punto de respawn
         transform.position = respawnPoint.transform.position;
+        //Impide que la pelota siga moviendose tras el respawn
+        playerRb.velocity = Vector3.zero * speed;
+
+
     }
 
 
