@@ -84,6 +84,21 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = respawnPoint.transform.position;
         }
+
+        if (collision.gameObject.CompareTag("PlataformaMovible"))
+        {
+            transform.parent = collision.transform;
+        }
+
+       
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("PlataformaMovible"))
+        {
+            transform.parent = null;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -148,10 +163,9 @@ public class PlayerController : MonoBehaviour
         //Impide que la pelota siga moviendose tras el respawn
         playerRb.velocity = Vector3.zero * speed;
 
-        
-
-
     }
+
+
 
 
 }
