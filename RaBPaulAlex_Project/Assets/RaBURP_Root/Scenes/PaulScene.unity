@@ -11107,7 +11107,7 @@ MonoBehaviour:
   ObjectAmover: {fileID: 441982100}
   StartPoint: {fileID: 1019590032}
   EndPoint: {fileID: 2055704665}
-  Velocidad: 1
+  Velocidad: 20
 --- !u!1001 &394828606
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49319,7 +49319,7 @@ MonoBehaviour:
   ObjectAmover: {fileID: 484008453}
   StartPoint: {fileID: 1794833258}
   EndPoint: {fileID: 1828689083}
-  Velocidad: 1
+  Velocidad: 20
 --- !u!4 &1597580433
 Transform:
   m_ObjectHideFlags: 0

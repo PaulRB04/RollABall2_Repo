@@ -88,6 +88,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("PlataformaMovible"))
         {
             transform.parent = collision.transform;
+            isGrounded = true;
         }
 
        
