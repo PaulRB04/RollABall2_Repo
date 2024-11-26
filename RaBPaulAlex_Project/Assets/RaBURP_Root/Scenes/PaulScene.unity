@@ -1088,12 +1088,17 @@ PrefabInstance:
     - target: {fileID: -6561104110807483510, guid: 46893323f4f2df84c9a6719f19149761,
         type: 3}
       propertyPath: m_TagString
-      value: Ground
+      value: Trampolin
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46893323f4f2df84c9a6719f19149761,
         type: 3}
       propertyPath: m_Name
       value: structure-canvas (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46893323f4f2df84c9a6719f19149761,
+        type: 3}
+      propertyPath: m_TagString
+      value: Trampolin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3767,12 +3772,17 @@ PrefabInstance:
     - target: {fileID: -6561104110807483510, guid: 46893323f4f2df84c9a6719f19149761,
         type: 3}
       propertyPath: m_TagString
-      value: Ground
+      value: Trampolin
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46893323f4f2df84c9a6719f19149761,
         type: 3}
       propertyPath: m_Name
       value: structure-canvas (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46893323f4f2df84c9a6719f19149761,
+        type: 3}
+      propertyPath: m_TagString
+      value: Trampolin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4073,12 +4083,17 @@ PrefabInstance:
     - target: {fileID: -6561104110807483510, guid: 46893323f4f2df84c9a6719f19149761,
         type: 3}
       propertyPath: m_TagString
-      value: Ground
+      value: Trampolin
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46893323f4f2df84c9a6719f19149761,
         type: 3}
       propertyPath: m_Name
       value: structure-canvas (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46893323f4f2df84c9a6719f19149761,
+        type: 3}
+      propertyPath: m_TagString
+      value: Trampolin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5978,6 +5993,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: structure-canvas (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46893323f4f2df84c9a6719f19149761,
+        type: 3}
+      propertyPath: m_TagString
+      value: Trampolin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9585,7 +9605,9 @@ MonoBehaviour:
   playerAudio: {fileID: 853090369}
   speed: 20
   jumpForce: 8
-  isGrounded: 0
+  jumpForceTrampolin: 25
+  isGrounded: 1
+  isGroundedTrampolin: 0
   soundLibrary:
   - {fileID: 8300000, guid: 362b7f3a85bf00744b5b0f9e925af2c4, type: 3}
   - {fileID: 8300000, guid: d8af0416a36b7234f9a8c47d79854f77, type: 3}
@@ -9713,7 +9735,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 853090361}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6, y: 219, z: 305.5}
+  m_LocalPosition: {x: 35.5, y: 93.6, z: 296}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16950,12 +16972,17 @@ PrefabInstance:
     - target: {fileID: -6561104110807483510, guid: 46893323f4f2df84c9a6719f19149761,
         type: 3}
       propertyPath: m_TagString
-      value: Ground
+      value: Trampolin
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46893323f4f2df84c9a6719f19149761,
         type: 3}
       propertyPath: m_Name
       value: structure-canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46893323f4f2df84c9a6719f19149761,
+        type: 3}
+      propertyPath: m_TagString
+      value: Trampolin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23525,7 +23552,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1784103627}
   m_LocalRotation: {x: 0.33025703, y: -0, z: -0, w: 0.94389105}
-  m_LocalPosition: {x: 6, y: 225.23453, z: 297.6814}
+  m_LocalPosition: {x: 35.5, y: 99.83454, z: 288.1814}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -27758,7 +27785,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2061174629}
   m_LocalRotation: {x: 0.33025703, y: 0, z: 0, w: 0.94389105}
-  m_LocalPosition: {x: 6, y: 225.23453, z: 297.6814}
+  m_LocalPosition: {x: 35.5, y: 99.83454, z: 288.1814}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
