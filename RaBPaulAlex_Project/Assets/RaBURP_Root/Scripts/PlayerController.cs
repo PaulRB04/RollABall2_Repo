@@ -17,7 +17,9 @@ public class PlayerController : MonoBehaviour
 
     [Header("Jump Variables")]
     public float jumpForce;
+    public float jumpForceTrampolin;
     public bool isGrounded;
+    public bool isGroundedTrampolin;
 
     [Header("Sound Library")]
     public AudioClip[] soundLibrary; //"Estantería" de sonidos del player
@@ -40,6 +42,7 @@ public class PlayerController : MonoBehaviour
         horInput = Input.GetAxis("Horizontal");
         verInput = Input.GetAxis("Vertical");
         Jump();
+        JumpTrampolin();
         if (transform.position.y < fallLimit) { Respawn(); }
         
     }
@@ -56,6 +59,18 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
+            isGroundedTrampolin = false;
+        }
+        
+       if (collision.gameObject.CompareTag("Trampolin"))
+        {
+            isGroundedTrampolin = true;
+            isGrounded = false;
+        }
+
+        if (collision.gameObject.CompareTag("Spike"))
+        {
+            transform.position = respawnPoint.transform.position;
         }
     }
 
@@ -88,7 +103,19 @@ public class PlayerController : MonoBehaviour
             isGrounded = false;
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
+
     }
+
+    void JumpTrampolin()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && isGroundedTrampolin == true)
+        {
+            playerAudio.PlayOneShot(soundLibrary[0]);
+            isGroundedTrampolin = false;
+            playerRb.AddForce(Vector3.up * jumpForceTrampolin, ForceMode.Impulse);
+        }
+    }
+
 
     void Respawn()
     {
@@ -97,6 +124,8 @@ public class PlayerController : MonoBehaviour
         transform.position = respawnPoint.transform.position;
         //Impide que la pelota siga moviendose tras el respawn
         playerRb.velocity = Vector3.zero * speed;
+
+        
 
 
     }
