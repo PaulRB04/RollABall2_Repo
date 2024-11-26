@@ -9,6 +9,7 @@ TagManager:
   - Goal
   - Spike
   - Trampolin
+  - MegaTrampolin
   layers:
   - Default
   - TransparentFX

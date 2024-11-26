@@ -18,8 +18,10 @@ public class PlayerController : MonoBehaviour
     [Header("Jump Variables")]
     public float jumpForce;
     public float jumpForceTrampolin;
+    public float jumpForceMegaTrampolin;
     public bool isGrounded;
     public bool isGroundedTrampolin;
+    public bool isGroundedMegaTrampolin;
 
     [Header("Sound Library")]
     public AudioClip[] soundLibrary; //"Estantería" de sonidos del player
@@ -43,6 +45,7 @@ public class PlayerController : MonoBehaviour
         verInput = Input.GetAxis("Vertical");
         Jump();
         JumpTrampolin();
+        JumpMegaTrampolin();
         if (transform.position.y < fallLimit) { Respawn(); }
         
     }
@@ -60,11 +63,20 @@ public class PlayerController : MonoBehaviour
         {
             isGrounded = true;
             isGroundedTrampolin = false;
+            isGroundedMegaTrampolin = false;
         }
         
        if (collision.gameObject.CompareTag("Trampolin"))
         {
             isGroundedTrampolin = true;
+            isGrounded = false;
+            isGroundedMegaTrampolin = false;
+        }
+
+       if (collision.gameObject.CompareTag("MegaTrampolin"))
+        {
+            isGroundedMegaTrampolin = true;
+            isGroundedTrampolin = false;
             isGrounded = false;
         }
 
@@ -114,6 +126,17 @@ public class PlayerController : MonoBehaviour
             isGroundedTrampolin = false;
             playerRb.AddForce(Vector3.up * jumpForceTrampolin, ForceMode.Impulse);
         }
+    }
+
+    void JumpMegaTrampolin()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && isGroundedMegaTrampolin == true)
+        {
+            playerAudio.PlayOneShot(soundLibrary[0]);
+            isGroundedMegaTrampolin = false;
+            playerRb.AddForce(Vector3.up * jumpForceMegaTrampolin, ForceMode.Impulse);
+        }
+
     }
 
 
