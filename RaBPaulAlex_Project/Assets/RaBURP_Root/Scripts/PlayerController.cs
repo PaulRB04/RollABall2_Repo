@@ -41,6 +41,7 @@ public class PlayerController : MonoBehaviour
         verInput = Input.GetAxis("Vertical");
         Jump();
         if (transform.position.y < fallLimit) { Respawn(); }
+        
     }
 
     private void FixedUpdate()
