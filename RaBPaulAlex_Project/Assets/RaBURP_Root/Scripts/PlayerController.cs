@@ -82,6 +82,7 @@ public class PlayerController : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Spike"))
         {
+            playerAudio.PlayOneShot(soundLibrary[1]);
             transform.position = respawnPoint.transform.position;
         }
 
@@ -138,7 +139,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && isGroundedTrampolin == true)
         {
-            playerAudio.PlayOneShot(soundLibrary[0]);
+            playerAudio.PlayOneShot(soundLibrary[3]);
             isGroundedTrampolin = false;
             playerRb.AddForce(Vector3.up * jumpForceTrampolin, ForceMode.Impulse);
         }
@@ -148,7 +149,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && isGroundedMegaTrampolin == true)
         {
-            playerAudio.PlayOneShot(soundLibrary[0]);
+            playerAudio.PlayOneShot(soundLibrary[3]);
             isGroundedMegaTrampolin = false;
             playerRb.AddForce(Vector3.up * jumpForceMegaTrampolin, ForceMode.Impulse);
         }
