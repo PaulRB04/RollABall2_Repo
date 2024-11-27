@@ -589,15 +589,16 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'PESCADOS: 0'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e31ffe992e1f43e4cb6658e52e0c71ca, type: 2}
+  m_sharedMaterial: {fileID: -6744001186074723572, guid: e31ffe992e1f43e4cb6658e52e0c71ca,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278222847
-  m_fontColor: {r: 1, g: 0.49876043, b: 0, a: 1}
+    rgba: 4281175807
+  m_fontColor: {r: 1, g: 0.5564264, b: 0.1745283, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -614,8 +615,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70.6
-  m_fontSizeBase: 70.6
+  m_fontSize: 90
+  m_fontSizeBase: 90
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -650,7 +651,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -342.30856, w: -29.034014}
+  m_margin: {x: -41.67479, y: 0, z: -351.26364, w: -82.48067}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -8073,7 +8074,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5d98cf2dec9f6e340863182aa48d7fc9, type: 2}
+  - {fileID: 2100000, guid: 1fa9c633f968831489dba00f678f0236, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
