@@ -11,6 +11,8 @@ TagManager:
   - Trampolin
   - MegaTrampolin
   - PlataformaMovible
+  - Cielo
+  - Music
   layers:
   - Default
   - TransparentFX

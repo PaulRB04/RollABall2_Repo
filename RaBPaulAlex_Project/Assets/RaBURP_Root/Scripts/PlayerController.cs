@@ -109,6 +109,11 @@ public class PlayerController : MonoBehaviour
         {
             playerAudio.PlayOneShot(soundLibrary[2]);
         }
+
+        if (other.gameObject.CompareTag("Cielo"))
+        {
+            playerAudio.PlayOneShot(soundLibrary[4]);
+        }
     }
 
     void VelocityMove()
@@ -164,6 +169,7 @@ public class PlayerController : MonoBehaviour
         transform.position = respawnPoint.transform.position;
         //Impide que la pelota siga moviendose tras el respawn
         playerRb.velocity = Vector3.zero * speed;
+
 
     }
 

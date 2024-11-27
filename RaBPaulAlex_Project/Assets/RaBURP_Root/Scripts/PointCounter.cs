@@ -33,6 +33,10 @@ public class PointCounter : MonoBehaviour
             Destroy(other.gameObject);
         }
 
+        if (other.transform.tag == "Cielo")
+        {
+            Destroy(other.gameObject);  
+        }
     }
 
 }
